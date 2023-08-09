@@ -19,6 +19,19 @@ const WeatherApp = () => {
     }
   };
 
+  return (
+    <div>
+      <h1>Weather App</h1>
+      <input
+        type="text"
+        placeholder="Enter city name"
+        value={city}
+        onChange={(e) => setCity(e.target.value)}
+      />
+      <button onClick={fetchWeatherData}>Get Weather</button>
+      {weatherData && <WeatherCard data={weatherData} />}
+    </div>
+  );
   
 };
 
